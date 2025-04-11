@@ -1,0 +1,2 @@
+endpoint: https://siem.example.com/api
+api_token: <encrypted_token>

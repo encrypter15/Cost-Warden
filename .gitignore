@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+logs/
+scans/
+reports/
+configs/encryption.key
+.env
+models/*.pkl

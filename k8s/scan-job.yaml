@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: warden-scan
+spec:
+  template:
+    spec:
+      containers:
+      - name: warden
+        image: cost-warden:latest
+        args: ["scan", "--target", "example.com", "--type", "web"]
+        volumeMounts:
+        - name: scans
+          mountPath: /app/scans
+      volumes:
+      - name: scans
+        emptyDir: {}
+      restartPolicy: Never
+  backoffLimit: 4

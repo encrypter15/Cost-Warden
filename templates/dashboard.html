@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COST-Warden Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>COST-Warden Dashboard</h1>
+    <p>Scans Completed: {{ stats.scans_completed }}</p>
+    <p>Vulnerabilities Found: {{ stats.vulns_found }}</p>
+    <p>Anomalies Detected: {{ stats.anomalies_detected }}</p>
+    <canvas id="vulnChart"></canvas>
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

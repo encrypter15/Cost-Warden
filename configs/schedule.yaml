@@ -1,0 +1,7 @@
+jobs:
+  - target: 192.168.1.0/24
+    type: port
+    interval: 3600
+  - target: example.com
+    type: web
+    interval: 86400

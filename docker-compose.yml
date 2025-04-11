@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  warden:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./scans:/app/scans
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - ./configs:/app/configs
+      - ./models:/app/models
+    environment:
+      - FLASK_ENV=production
+      - WARDEN_LOG_LEVEL=INFO
+      - NVD_API_KEY=${NVD_API_KEY}
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  redis_data:
