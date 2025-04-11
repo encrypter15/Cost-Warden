@@ -1,5 +1,6 @@
 **Continuous Offensive Security Testing (COST) Tool**
-[logo]: https://raw.githubusercontent.com/encrypter15/Cost-Warden/refs/heads/master/logo.png "Cost-Warden Logo"
+![Cost Warden Logo](https://raw.githubusercontent.com/encrypter15/Cost-Warden/refs/heads/master/logo.png)
+
 **Author**: Encrypter15 (encrypter15@gmail.com)  
 **Version**: 1.3  
 **License**: MIT  
